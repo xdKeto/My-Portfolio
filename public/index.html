@@ -1,11 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet" />
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+
+      #hero {
+        padding-top: 6rem;
+      }
+    </style>
   </head>
   <body>
-    
+    <section id="navbar">
+      <nav class="fixed w-full z-20 top-0 start-0 bg-gradient-to-b from-charcoal from-70% via-charcoal/90 to-transparent">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="image/logo.png" class="h-10 pt-1" alt="" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-lemon">Yestoya Minggus</span>
+          </a>
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden text-lemon" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium text-lg flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+              <li>
+                <a href="index.html#hero" class="block py-2 px-3 text-white hover:text-lemon md:p-0" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="index.html#skills" class="block py-2 px-3 rounded md:p-0 text-white hover:text-lemon">Skills</a>
+              </li>
+              <li>
+                <a href="index.html#experiences" class="block py-2 px-3 rounded md:p-0 text-white hover:text-lemon">Experiences</a>
+              </li>
+              <li>
+                <a href="index.html#contact" class="block py-2 px-3 rounded md:p-0 text-white hover:text-lemon">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section id="hero" class="bg-lemon">
+      <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 py-8 px-4">
+        <div class="flex items-center justify-center order-first md:shrink-0 lg:ps-24">
+          <img src="image/profile.jpg" class="w-64 h-64 sm:w-96 sm:h-96 rounded-full" alt="" />
+        </div>
+
+        <div class="flex flex-col text-left md:ms-16 md:me-48 lg:ms-0">
+          <h1 class="mb-4 text-5xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl">
+            <span class="text-charcoal">hi, <br /></span> I'm Yestoya.
+          </h1>
+
+          <p class="mb-4 text-lg font-semibold text-charcoal lg:text-xl">
+            I'm a passionate Computer Science student with a focus on web development and software engineering.
+          </p>
+
+          <h5 class="mb-2 font-bold text-falu text-lg lg:text-xl">Here's my Portfolio</h5>
+          <a href="#skills" class="inline-flex whitespace-nowrap justify-center items-center py-3 px-5 font-medium text-center text-white rounded-lg bg-charcoal hover:bg-charcoal/90 sm:w-1/4">
+            Get started
+            <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="bg-charcoal">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#FFF0C2">
+        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 77 666.7 77 833.3 28 1000 28V0H0Z" opacity=".5"></path>
+        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 70 666.7 70 833.3 16 1000 16V0H0Z" opacity=".5"></path>
+        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 63 666.7 63 833.3 4 1000 4V0H0Z"></path>
+      </svg>
+
+      <div id="container">
+        <div class="grid grid-rows-2 grid-flow-col auto-rows-auto">
+          <h2 class="text-lemon text-xl md:text-4xl text-center font-extrabold">My Skills</h2>
+          <p class="text-lemon underline underline-offset-2 text-lg lg:text-xl text-center font-semibold">Click the cards for project pictures</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3 ms-5 me-5 md:ms-20 md:me-20">
+          <div class="my-2 mx-3 flex justify-center lg:justify-end">
+            <button class="block max-w-sm p-6 bg-lemon border border-lemon/90 rounded-lg shadow hover:bg-amber-50">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Web Development</h5>
+              <p class="text-black font-medium">
+                I specialize in creating dynamic, responsive websites using the latest web technologies. From front-end design to back-end development, using frameworks such as
+                <span class="text-sienna">Laravel, React, Svelte, and more.</span>
+              </p>
+            </button>
+          </div>
+
+          <div class="my-2 mx-3 flex justify-center lg:justify-start">
+            <button class="block max-w-sm p-6 bg-lemon border border-lemon/90 rounded-lg shadow hover:bg-amber-50">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Mobile Development</h5>
+              <p class="text-black font-medium">
+                I aspire to develop functional mobile applications. My focus is on delivering a seamless user experience that works flawlessly across all devices using tools such as <span class="text-sienna"> Flutter and Kotlin.</span>
+              </p>
+            </button>
+          </div>
+
+          <div class="my-2 mx-3 flex justify-center lg:justify-end">
+            <a href="{{ route('projects.ui') }}" class="block max-w-sm p-6 bg-lemon border border-lemon/90 rounded-lg shadow hover:bg-amber-50">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">UI/UX Design</h5>
+              <p class="text-black font-medium">
+                I can create and design aesthetically pleasing user interfaces and enhances user experience while still mainting functionality and efficiency, using tools like <span class="text-sienna">Figma</span>
+              </p>
+            </a>
+          </div>
+
+          <div class="my-2 mx-3 flex justify-center lg:justify-start">
+            <a href="{{ route('projects.graphic') }}" class="block max-w-sm p-6 bg-lemon border border-lemon/90 rounded-lg shadow hover:bg-amber-50">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Graphic Design</h5>
+              <p class="text-black font-medium">I can design, whether it's creating logos, branding materials, or even clothing using tools like <span class="text-sienna"> Photoshop.</span></p>
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-4 mt-3 ms-5 me-5 md:ms-20 md:me-20">
+          <div class="my-2 mx-3 flex justify-center">
+            <a href="{{ route('projects.music') }}" class="block max-w-sm p-6 bg-lemon border border-lemon/90 rounded-lg shadow hover:bg-amber-50">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Music Tutor</h5>
+              <p class="text-black font-medium">
+                I'm passionate about music and I want to share my knowledge with everyone else, I offer personalized music lessons for students of all ages. My teaching approach is tailored to each student's skill level and goals, whether
+                they are beginners or looking to refine their techniques in instruments like <span class="text-sienna">piano or guitar.</span>
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiences" class="bg-lemon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#25424C">
+        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 77 666.7 77 833.3 28 1000 28V0H0Z" opacity=".5"></path>
+        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 70 666.7 70 833.3 16 1000 16V0H0Z" opacity=".5"></path>
+        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 63 666.7 63 833.3 4 1000 4V0H0Z"></path>
+      </svg>
+
+      <div id="container">
+        <div class="grid grid-rows-1 grid-flow-col auto-rows-auto">
+          <h2 class="text-charcoal text-xl md:text-4xl text-center font-extrabold">Experiences</h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-charcoal">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#FFF0C2">
+        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 77 666.7 77 833.3 28 1000 28V0H0Z" opacity=".5"></path>
+        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 70 666.7 70 833.3 16 1000 16V0H0Z" opacity=".5"></path>
+        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 63 666.7 63 833.3 4 1000 4V0H0Z"></path>
+      </svg>
+
+      <div id="container">
+        <div class="grid grid-rows-1 grid-flow-col auto-rows-auto">
+            <h2 class="text-lemon text-xl md:text-4xl text-center font-extrabold">Contact Me</h2>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 py-8 px-4">
+            <div class="flex flex-col text-left md:ms-16 md:me-48 lg:ms-0">
+              <h1 class="mb-4 mt-3 text-5xl font-extrabold text-lemon md:text-5xl lg:text-6xl">
+                Yestoya Lumenchristo Minggus
+              </h1>
+      
+              <p class="mb-8 text-md font-medium text-white lg:text-lg"> I'm a passionate Computer Science student with a focus on web development and software engineering</p>
+      
+              <a href="https://wa.me/08123460265"
+                class="inline-flex whitespace-nowrap justify-center items-center py-3 px-5 font-bold text-center text-black  rounded-lg bg-lemon hover:bg-lemon/90 sm:w-1/4 ">
+                Hire Me
+                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+              </a>
+            </div>
+      
+            <div class="flex items-center justify-center order-first md:shrink-0 lg:ps-24">
+              <img src="image/profile2.jpg" class="w-64 h-64 sm:w-96 sm:h-96 rounded-full" alt="">
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="footer" class="bg-lemon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#25424C">
+        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 77 666.7 77 833.3 28 1000 28V0H0Z" opacity=".5"></path>
+        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 70 666.7 70 833.3 16 1000 16V0H0Z" opacity=".5"></path>
+        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 63 666.7 63 833.3 4 1000 4V0H0Z"></path>
+      </svg>
+
+      <p class="text-charcoal text-lg md:text-xl font-semibold text-center py-5"> Yestoya L Minggus | All Rights Reserved</p>
+    </section>
   </body>
 </html>
